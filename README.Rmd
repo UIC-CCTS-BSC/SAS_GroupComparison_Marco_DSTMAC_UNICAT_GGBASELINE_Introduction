@@ -1,5 +1,6 @@
 ---
 output: github_document
+bibliography: refs.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -11,16 +12,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-# SAS_GroupComparison_Marco_DSTMAC_UNICAT_GGBASELINE_Introduction
+# SAS Group Comparison Macros: %DSTMAC, %UNI_CAT, %ggBaseline
 
 <!-- badges: start -->
 <!-- badges: end -->
 
+
 **Purpose**
 : Introduce different summary tables under group stratification
 
-**SAS Macros**
-: %DSTMAC, %UNICAT, %ggBaseline
+**Description**
+: The SAS file walks through data analysis for a demonstration dataset using three SAS macros: %DSTMAC [@Fenchel2011], %UNI_CAT [@Liu2019], and %ggBaseline [@Gu2018]. Two variables ("trt" and "sex") are used as stratification variables. In summary statistics, means ± standard deviations are calculated for continuous variables and N (%) are produced for categorical variables. Statistical tests include:
+
+* Parametric Test: T-Test/ANOVA for continuous variables
+* Parametric Test: Likelihood Ratio Chi-Square Test for categorical variables
+* Non-parametric Test: Kruskal-Wallis Test for continuous variables 
+* Non-parametric Test: Fisher's Exact Test for categorical variables
 
 **Dataset**
 : PBC 
@@ -35,3 +42,5 @@ knitr::opts_chunk$set(
 : Pei-Shan Yen, Nairita Ghosal, Yi-Fan Chen\
 Biostatistics Core, Center for Clinical and Translational Science\
 University of Illinois at Chicago
+
+## References
